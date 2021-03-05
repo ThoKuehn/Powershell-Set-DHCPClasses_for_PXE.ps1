@@ -1,16 +1,15 @@
 #Requires –Version 0.4
 <#
 .SYNOPSIS
-    Skript zum automatisierten konfigurieren der für einen PXE-Boot notwendigen Optionen.
+    Script to automatically configure the options required for a PXE boot.
 
 .DESCRIPTION
-    Das Skript legt alle drei für die komplette PXE-Konforme Konfiguration eines DHCP Servers notwendigen Richtlinien an.
-    Die Richtlinien werden mit den notwendigen Werten befüllt.
-    Alle Richtlinien werden auf alle Bereiche des DHCP Servers verteielt. Eine Scope spezifiche Konfiguration ist nicht möglich. 
-
+    The script creates all three guidelines necessary for the complete PXE-compliant configuration of a DHCP server.
+    The guidelines are filled with the necessary values.
+    All guidelines are distributed to all areas of the DHCP server. A scope-specific configuration.
 .PARAMETER PXE_Servername
 
-    Name des Pxe Servers der angesprochen werden soll.
+    FQDN of the PXE server to be addressed.
 
 
 
@@ -21,8 +20,9 @@
 .NOTES
 
        Autor: ThomasKühn 
-       zuletzt bearbeitet: 03.03.2021
-       Version: 0.1.0
+       last edited: 03.03.2021
+       Vwesion: 0.1.1 Header translated into English.
+       Version: 0.1.0 initial Version
 
          
 #>
