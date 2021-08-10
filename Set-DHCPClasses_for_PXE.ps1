@@ -1,4 +1,4 @@
-#Requires –Version 0.4
+#Requires -runasadministrator
 <#
 .SYNOPSIS
     Script to automatically configure the options required for a PXE boot.
