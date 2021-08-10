@@ -19,7 +19,7 @@
        
 .NOTES
 
-       Autor: ThomasKühn 
+       Autor: Thomas Kühn 
        last edited: 03.03.2021
        Vwesion: 0.1.1 Header translated into English.
        Version: 0.1.0 initial Version
