@@ -56,9 +56,10 @@ netsh dhcp server add optiondef 60 PXEClient String 0 comment="PXE support"
 Add-DhcpServerv4Policy -Name "PXEClient (UEFI x64)" -Condition OR -VendorClass EQ,"PXEClient (UEFI x64)*"
 
 # Now create the options associated with the policy above.  Make sure your Policy Name below matches what you set on line 15
-set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x64)" -OptionID 60 -Value PXEClient 
-Set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x64)" -OptionId 67 "boot\x64\wdsmgfw.efi" 
-Set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x64)" -OptionId 66 -Value "$PXE_Servername"
+set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x64)" -OptionID 60 -Value "PXEClient"
+Set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x64)" -OptionId 66 -Value "$PXE_Servername" 
+Set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x64)" -OptionId 67 -Value "boot\x64\wdsmgfw.efi" 
+
 
 
 
@@ -77,9 +78,10 @@ netsh dhcp server add optiondef 60 PXEClient String 0 comment="PXE support"
 Add-DhcpServerv4Policy -Name "PXEClient (BIOS x86 & x64)" -Condition OR -VendorClass EQ,"PXEClient (BIOS x86 & x64)*"
 
 # Now create the options associated with the policy above.  Make sure your Policy Name below matches what you set on line 15
-set-DhcpServerv4OptionValue -PolicyName "PXEClient (BIOS x86 & x64)" -OptionID 60 -Value PXEClient 
-Set-DhcpServerv4OptionValue -PolicyName "PXEClient (BIOS x86 & x64)" -OptionId 67 "boot\x64\wdsnbp.com" 
+set-DhcpServerv4OptionValue -PolicyName "PXEClient (BIOS x86 & x64)" -OptionID 60 -Value "PXEClient" 
 Set-DhcpServerv4OptionValue -PolicyName "PXEClient (BIOS x86 & x64)" -OptionId 66 -Value "$PXE_Servername"
+Set-DhcpServerv4OptionValue -PolicyName "PXEClient (BIOS x86 & x64)" -OptionId 67 -Value "boot\x64\wdsnbp.com" 
+
 
 
 
@@ -99,9 +101,9 @@ netsh dhcp server add optiondef 60 PXEClient String 0 comment="PXE support"
 Add-DhcpServerv4Policy -Name "PXEClient (UEFI x86)" -Condition OR -VendorClass EQ,"PXEClient (UEFI x86)*"
 
 # Now create the options associated with the policy above.  Make sure your Policy Name below matches what you set on line 15
-set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x86)" -OptionID 60 -Value PXEClient 
-Set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x86)" -OptionId 67 "boot\x86\wdsmgfw.efi" 
+set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x86)" -OptionID 60 -Value "PXEClient" 
 Set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x86)" -OptionId 66 -Value "$PXE_Servername"
+Set-DhcpServerv4OptionValue -PolicyName "PXEClient (UEFI x86)" -OptionId 67 -Value "boot\x86\wdsmgfw.efi" 
 
 }
 
